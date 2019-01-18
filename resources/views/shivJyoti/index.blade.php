@@ -73,86 +73,7 @@
         </div>
     </section>
 
-    <!-- DISCOVER MORE -->
-    <section>
-        <div class="container com-sp pad-bot-70">
-            <div class="row">
-                <div class="con-title">
-                    <h2>Discover <span>More</span></h2>
-                    <p>Find out the Latest and Trading Post of Our School click below Categories For get more Knowledge Stay Tune</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="ed-course">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="about.html">
-                                <img src="images/h-about.jpg" alt="">
-                                <span>Academics</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="admission.html">
-                                <img src="images/h-adm1.jpg" alt="">
-                                <span>Admission</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="dashboard.html">
-                                <img src="images/h-cam.jpg" alt="">
-                                <span>Students profile</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="research.html">
-                                <img src="images/h-res.jpg" alt="">
-                                <span>Research & Education</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="all-courses.html">
-                                <img src="images/h-about1.jpg" alt="">
-                                <span>Couse</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="db-time-line.html">
-                                <img src="images/h-adm.jpg" alt="">
-                                <span>Exam Time Line</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="seminar.html">
-                                <img src="images/h-cam1.jpg" alt="">
-                                <span>Seminar 2018</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="ed-course-in">
-                            <a class="course-overlay" href="events.html">
-                                <img src="images/h-res1.jpg" alt="">
-                                <span>Research & Education</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- POPULAR COURSES -->
     {{-- <section class="pop-cour">
         <div class="container com-sp pad-bot-70">
@@ -351,10 +272,12 @@
                 <div class="col-md-6">
                     <div class="bot-gal h-gal ho-event-mob-bot-sp">
                         <h4>Photo Gallery</h4>
+                    
                         <ul>
-                            <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/6.jpg" alt="">
+                                @foreach ($photos as $photo)
+                        <li><img class="materialboxed" data-caption="Education master image captions" src="{{$photo->photos->file}}" alt="">
                             </li>
-                            <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/7.jpg" alt="">
+                            {{-- <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/7.jpg" alt="">
                             </li>
                             <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/10.jpg" alt="">
                             </li>
@@ -375,8 +298,10 @@
                             <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/7.jpg" alt="">
                             </li>
                             <li><img class="materialboxed" data-caption="Education master image captions" src="images/ami/8.jpg" alt="">
-                            </li>
+                            </li>---}}
+                            @endforeach
                         </ul>
+                       
                     </div>
                 </div>
                 {{-- <div class="col-md-4">
@@ -395,9 +320,9 @@
                             <ul>
                                 @foreach ($news as $new )
                                 <li>
-                                    <div class="ho-ev-date"><span>07</span><span>jan,2018</span>
+                                <div class="ho-ev-date"><span>7</span><span>jan,2018</span>
                                     </div>
-                                    
+                        
                                         
                                     
                                     <div class="ho-ev-link">
@@ -450,6 +375,86 @@
             </div>
         </div>
     </section>
+    <!-- DISCOVER MORE -->
+    <section>
+        <div class="container com-sp pad-bot-70">
+            <div class="row">
+                <div class="con-title">
+                    <h2>Discover <span>More</span></h2>
+                    <p>Find out the Latest and Trading Post of Our School click below Categories For get more Knowledge Stay Tune</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ed-course">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="/shivAcademy">
+                                <img src="images/h-about.jpg" alt="">
+                                <span>Academics</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="/shivQuotes">
+                                <img src="images/h-adm1.jpg" alt="">
+                                <span>Quotes</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="/shivCourse">
+                                <img src="images/h-about1.jpg" alt="">
+                                <span>Course</span>
+                            </a>
+                        </div>
+                    </div>
+                    {{-- <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="research.html">
+                                <img src="images/h-res.jpg" alt="">
+                                <span>Research & Education</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="all-courses.html">
+                                <img src="images/h-about1.jpg" alt="">
+                                <span>Couse</span>
+                            </a>
+                        </div>
+                    </div> --}}
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="db-time-line.html">
+                                <img src="images/h-adm.jpg" alt="">
+                                <span>Exam Time Line</span>
+                            </a>
+                        </div>
+                    </div>
+                    {{-- <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="seminar.html">
+                                <img src="images/h-cam1.jpg" alt="">
+                                <span>Seminar 2018</span>
+                            </a>
+                        </div>
+                    </div> --}}
+                    {{-- <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="ed-course-in">
+                            <a class="course-overlay" href="events.html">
+                                <img src="images/h-res1.jpg" alt="">
+                                <span>Research & Education</span>
+                            </a>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FOOTER COURSE BOOKING -->
     @include('includes/footerCourse')

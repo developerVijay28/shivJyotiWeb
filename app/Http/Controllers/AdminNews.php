@@ -15,6 +15,12 @@ class AdminNews extends Controller
     public function index()
     {
         return view('adminPanel.news');
+        
+    }
+    
+    public function indexNews(){
+        $newsData=News::all();
+        return view('adminPanel.newsShow',compact('newsData'));
     }
 
     /**
@@ -37,7 +43,7 @@ class AdminNews extends Controller
     {
         $input=$request->all();
         News::create($input);
-        echo "the news is added";
+    return redirect('/adminNewsView');
     }
 
     /**
@@ -82,6 +88,15 @@ class AdminNews extends Controller
      */
     public function destroy($id)
     {
-        //
+        $newsData=News::findOrFail($id);
+
+        //  unlink('public_path()'.$post->photo->file);
+  
+          $newsData->delete();
+  
+          //Session::flash('deleted_post','You sucessfully deleted the Post');
+  
+          //return redirect('/adminNewsView');
+          return redirect('/adminNewsView');
     }
 }

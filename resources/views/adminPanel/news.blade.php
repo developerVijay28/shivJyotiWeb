@@ -1,7 +1,10 @@
 @extends('adminPanel.dashbord')
 @section('adminWorkingSection')
 <h4>Add the Latest News And Events Here</h4>
-<form method="post" action="{{url('/adminNews')}}">
+<form action="{{route('admin.adminNews.store')}}" method="POST">
+    {{-- <form action="{{route('quoteCreate.store')}}" method="POST" class="center"> --}}
+
+
     @method('post')
 @csrf
                 <div class="form-group">

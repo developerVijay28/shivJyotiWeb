@@ -10,12 +10,9 @@ class ShowAdminNews extends Controller
 {
     public function index(){
         $news=News::all();
-        //$posts=Post::all();
-        // foreach($news as $new){
-
-        //     echo $new->topic;
-        // }
-return view('shivJyoti.index',compact('news'));
+        $photos=AdminPhoto::all()->where('id','<',10);
+        // 
+return view('shivJyoti.index',compact('news','photos'));
     }
    
 }

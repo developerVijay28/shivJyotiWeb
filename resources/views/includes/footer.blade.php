@@ -9,7 +9,7 @@
 				<p></p>
 			  </div>
 			  </div>-->
-            <div class="row wed-foot-link">
+         <!---   <div class="row wed-foot-link">
                 <div class="col-md-4 foot-tc-mar-t-o">
                     <h4>Top Courses</h4>
                     <ul>
@@ -51,7 +51,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div>---->
             <div class="row wed-foot-link-1">
                 <div class="col-md-6 foot-tc-mar-t-o">
                     <h4>Get In Touch</h4>

@@ -16,6 +16,26 @@ class AdminPost extends Controller
     {
         return view('adminPanel.post');
     }
+    
+    // for showing the acedmnic Post
+    public function acedmicPost(){
+     $posts=Post::all()->where('category_name','Acedamic');   
+        return view('postCat.academy',compact('posts'));
+    }
+
+    //for showing the Course Post
+    public function coursePost(){
+        $courses=Post::all()->where('category_name','Course');
+        return view('postCat.course',compact('courses'));
+    }
+    public function QuotePost(){
+        $quotes=Post::all()->where('category_name','Quotes');
+        return view('postCat.quote',compact('quotes'));
+    }
+    public function indexPost(){
+        $allPost=Post::orderBy('id','desc')->paginate(6);
+        return view('adminPanel.postShow',compact('allPost'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +57,7 @@ class AdminPost extends Controller
     {
         $input=$request->all();
        Post::create($input);
-       echo "admin Post got added";
+       return redirect('/adminPostView');
     }
 
     /**
@@ -82,6 +102,8 @@ class AdminPost extends Controller
      */
     public function destroy($id)
     {
-        //
+        $allPost=Post::findOrFail($id);
+        $allPost->delete();
+        return redirect('/adminPostView');
     }
 }

@@ -10,13 +10,15 @@
                     <select id="inputState" class="form-control" name="category_name">
                       <option selected disabled>Choose...</option>
                       <option value="Acedamic">Acedamic</option>
-                      <option value="Addmission">Addmission</option>
-                      <option value="RandEdu">Research And Enduction</option>
+                      <option value="Quotes">Quotes</option>
                       <option value="Course">Course</option>
                       <option value="ExTimeLine">Exam Time Line</option>
-                      <option value="Seminar">Seminar</option>
-                      <option value="latNeAle">Latest News And Alerts</option>
+                      
                     </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="topic">Topic/Header</label>
+                      <input type="text" class="form-control" name="topic" id="topic">
                     </div>
                     <div class="form-group">
                             <label for="exampleFormControlTextarea1">Write Overview</label>

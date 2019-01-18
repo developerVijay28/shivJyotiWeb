@@ -74,13 +74,13 @@
                                 <a class="nav-link" href="/adminPanel">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/adminPost">ADD POST</a>
+                                <a class="nav-link" href="/adminPostView">View POST</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/adminPost">ADD News & Events</a>
+                                <a class="nav-link" href="/adminNewsView">View News & Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="adminPhoto">ADD PHOTO</a>
+                                <a class="nav-link" href="adminPhoto">View PHOTO</a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="/logout">logout</a>

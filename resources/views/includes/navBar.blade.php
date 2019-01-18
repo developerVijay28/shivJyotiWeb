@@ -222,7 +222,7 @@
 													<h4>SomeHow In Gallery </h4>
                                                     <ul>
                                                         <li><a href="/shivSchoolActities">Activities</a></li>
-														<li><a href="index-1.html">Annual Function</a></li>
+														<li><a href="/shivSchoolAnnual">Annual Function</a></li>
 														<li><a href="all-courses.html">Celebration Days</a></li>
 														<li><a href="course-details.html">Camp</a></li>
 														<li><a href="about.html">Festivals</a></li>
@@ -238,10 +238,10 @@
                                                 </div>
                                 </li>
                                
-                                <li class="admi-menu2">
-                                        <a href="/shivAddmission" class="mm-arr">Students</a>
+                               <!--- <li class="admi-menu2">
+                                        <a href="/shivAddmission" class="mm-arr">Students</a>--->
                                         <!-- MEGA MENU 1 -->
-                                        <div class="mm-pos">
+                                      <!--- <div class="mm-pos">
                                                 <div class="admi-mm2 m-menu">
                                                     <div class="m-menu-inn">
                                                         <div class="mm2-com mm1-com mm1-s1">
@@ -287,7 +287,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>---->
                                 
                                 <li><a href="/shivContact">Contact us</a>
                                 </li>

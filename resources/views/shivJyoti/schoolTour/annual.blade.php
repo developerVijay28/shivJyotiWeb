@@ -15,17 +15,19 @@
                 </div>
             
         @include('includes/bootstrap')
-                <div class="container">
+          <div class="container">
+                @foreach ($photo2 as $photo)
                     <div class="row">
                       <div class="col">
                         <div class="card text-black mb-3" style="max-width: 24rem;">
-                            <div class="card-header">Header</div>
+                        <div class="card-header">{{$photo->header}}</div>
                             <div class="card-body">
                              
-                              <img src="/images/schoolTour/AnnualFunction/124.jpg" class="card-img" alt="...">
+                            <img src="{{$photo->photos->file}}" class="card-img" alt="...">
                             </div>
                           </div>
                       </div>
+                      @endforeach
                       <div class="col">
                         <div class="card text-black mb-3" style="max-width: 24rem;">
                             <div class="card-header">Header</div>

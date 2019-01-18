@@ -75,14 +75,13 @@ Route::get('/shivSchoolAddmission', function(){
 Route::get('/shivSchoolTiming', function(){
     return view('shivJyoti/addmission.schoolTiming');
 });
-// Route::get('/shivSchoolActities', function(){
-//     return view('shivJyoti/schoolTour.activities');
-// });
-Route::resource('shivSchoolActities','ShowPhotoActivities');
 
-Route::get('/shivSchoolAnnual', function(){
-    return view('shivJyoti/schoolTour.annual');
-});
+Route::resource('shivSchoolActities','ShowPhotoActivities');
+Route::get('/shivSchoolAnnual','ShowPhotoActivities@annualfunction');
+Route::get('/shivAcademy','AdminPost@acedmicPost');
+Route::get('/shivCourse','AdminPost@coursePost');
+Route::get('shivQuotes','AdminPost@QuotePost');
+
 // admin site
 Route::get('/adminPanel',function(){
     return view('adminPanel.dashbord');
@@ -101,6 +100,9 @@ Route::group(['middleware'=>'admin','as'=>'admin.'],function(){
     Route::resource('/adminPhoto','PhotoAdd');
     Route::resource('/adminPost','AdminPost');
     Route::resource('/adminNews','AdminNews');
+    Route::get('/adminNewsView','AdminNews@indexNews');
+    Route::get('/adminPostView','AdminPost@indexPost');
+    // Route::resource('/adminQuotes','AdminQuotes');
 });
 
 Auth::routes();
